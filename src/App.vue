@@ -8,60 +8,36 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 import Instruction from './components/Instruction.vue'
 import MultipleChoice from './components/MultipleChoice.vue'
+import MultipleChoicePractice from './components/MultipleChoicePractice.vue'
 
 export default {
   name: 'app',
   data: function() {
     return {
-      pages: [{
-        type: 'Instruction',
-        content: {
-          sentences: [
-            '欢迎你参加本次实验！',
-            '本实验是一个分类任务。请你将电脑屏幕上出现的图形正确地分到A组或者B组中。两组分别有一个示例图片。',
-            '按【空格键】继续',
-          ]
-        }
-      }, {
-        type: 'MultipleChoice',
-        content: {
-          question: {
-            type: 'text',
-            content: '问题',
-          },
-          choices: [{
-            type: 'text',
-            key: 'a',
-            content: 'a',
-          }, {
-            type: 'text',
-            key: 'b',
-            content: 'b',            
-          }]
-        }
-      }],
-      pageIdx: 0
+
     }
   },
   computed: {
     currentPage: function(){
       return this.pages[this.pageIdx];
-    }
+    },
+    ...mapState([
+      'pages',
+      'pageIdx'
+    ]),
   },
   components: {
     Instruction,
     MultipleChoice,
+    MultipleChoicePractice,
   },
   methods: {
-    nextPage() {
-      this.pageIdx += 1;
-      console.log(`page: ${this.pageIdx}`)
-      if (this.pageIdx >= this.pages.length) {
-        this.pageIdx = 0;
-      }
-    }
+    ...mapMutations([
+      'nextPage',
+    ]),
   },
 }
 </script>

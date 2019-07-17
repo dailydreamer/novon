@@ -30,7 +30,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODO
 
-- [] Q&A data structure
-- [] html
+- [] MultipleChoicePractice interaction
+- [] beautify html & css
 - [] random strategy
 - [] auto register components
+- [] key and mouse binding
+
+## type
+
+Instruction 指导语
+
+MultipleChoicePractice 单选题教学
+
+MultipleChoice 单选题

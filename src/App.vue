@@ -1,7 +1,8 @@
 <template>
-  <div id="app" v-focus @keyup.space="nextPage" tabindex="0">
+  <div id="app" v-focus @keyup.space="nextPage" tabindex="0" class="section">
     <component 
-      :is="currentPage.type" 
+      :is="currentPage.type"
+      :pageIdx="pageIdx"
       :content="currentPage.content">
     </component>
   </div>
@@ -12,6 +13,7 @@ import { mapState, mapMutations } from 'vuex'
 import Instruction from './components/Instruction.vue'
 import MultipleChoice from './components/MultipleChoice.vue'
 import MultipleChoicePractice from './components/MultipleChoicePractice.vue'
+import SingleImage from './components/SingleImage.vue'
 
 export default {
   name: 'app',
@@ -33,6 +35,7 @@ export default {
     Instruction,
     MultipleChoice,
     MultipleChoicePractice,
+    SingleImage,
   },
   methods: {
     ...mapMutations([
@@ -44,6 +47,6 @@ export default {
 
 <style>
 #app {
-  text-align: center;
+  height: 100vh;
 }
 </style>

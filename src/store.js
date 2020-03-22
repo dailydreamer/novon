@@ -37,6 +37,7 @@ var jsonstring = {
     content: {
       sentences: [
         '本部分实验结束，感谢你的参与！',
+        '请同时按下 ALT + F4 结束'
       ]
     }
   }],

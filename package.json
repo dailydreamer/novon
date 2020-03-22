@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron": "electron .",
+    "electron_package": "electron-packager ./ novon --platform=win32 --arch=x64 --overwrite",
+    "electron_build": "electron-builder --win --x64"
   },
   "dependencies": {
     "buefy": "^0.8.6",
@@ -19,6 +22,9 @@
     "@vue/cli-plugin-eslint": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
     "babel-eslint": "^10.0.1",
+    "electron": "^7.1.1",
+    "electron-builder": "^22.1.0",
+    "electron-packager": "^14.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"

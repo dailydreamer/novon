@@ -6,8 +6,11 @@
 </template>
 
 <script>
+import {nextPageMixin} from '../mixins'
+
 export default {
   name: 'SingleImage',
+  mixins: [nextPageMixin],
   props: {
     pageIdx: Number,
     content: Object

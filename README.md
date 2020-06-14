@@ -30,11 +30,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODO
 
+- [x] set timer jump to next page
+- [x] record page stopping time
+- [x] record answer for MultipleChoice
 - [] MultipleChoicePractice interaction
+- [] seperate assets and config for each experiments
+
 - [] beautify html & css
 - [] random strategy
 - [] auto register components
-- [] key and mouse binding
 
 ## type
 
@@ -43,3 +47,5 @@ Instruction 指导语
 MultipleChoicePractice 单选题教学
 
 MultipleChoice 单选题
+
+SingleImage 单张图片

@@ -9,8 +9,11 @@
 </template>
 
 <script>
+import {nextPageMixin} from '../mixins'
+
 export default {
   name: 'Instruction',
+  mixins: [nextPageMixin],
   props: {
     content: Object
   }

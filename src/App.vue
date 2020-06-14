@@ -1,8 +1,9 @@
 <template>
-  <div id="app" v-focus @keyup.space="nextPage" tabindex="0" class="section">
-    <component 
+  <div id="app" class="section">
+    <component
       :is="currentPage.type"
       :pageIdx="pageIdx"
+      :timeout="currentPage.timeout"
       :content="currentPage.content">
     </component>
   </div>

@@ -11,11 +11,14 @@
 </template>
 
 <script>
+import {nextPageMixin, recordTimeMixin, makeChoiceMixin, addRecordMixin} from '../mixins'
+
 export default {
   name: 'MultipleChoice',
+  mixins: [nextPageMixin, recordTimeMixin, makeChoiceMixin, addRecordMixin],
   props: {
     content: Object
-  }
+  },
 }
 </script>
 

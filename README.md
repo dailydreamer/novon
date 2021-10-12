@@ -1,5 +1,7 @@
 # novon
 
+模块化心理学实验框架。
+
 ## Project setup
 ```
 npm install
